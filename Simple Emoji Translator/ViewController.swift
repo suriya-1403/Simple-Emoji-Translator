@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showmessage(sender: UIButton){
-        var emdic: [String: String] = [ "😂": "Ha..Ha..",
+        let emdic: [String: String] = [ "😂": "Ha..Ha..",
                                         "🐲": "Dragon",
                                         "👻": "Snapghost",
                                         "🃏": "Jocker",
@@ -29,6 +29,17 @@ class ViewController: UIViewController {
         
         let emlab = UILabel(frame: CGRect(x: 90,y: 30,width: 150,height: 150))
         emlab.font = UIFont.systemFont(ofSize: 100)
+        
+        if let wordtocheck = selbut.titleLabel?.text{
+            
+            let meaning = emdic[wordtocheck]
+            
+            let alertController = UIAlertController(title: "Meaning", message: meaning, preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            present(alertController,animated: true,completion: nil)
+            
+        }
+        
     }
 
 

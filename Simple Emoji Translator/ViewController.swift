@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         let emdic: [String: String] = [ "😂": "Ha..Ha..",
                                         "🐲": "Dragon",
                                         "👻": "Snapghost",
-                                        "🃏": "Jocker",
+                                        "🃏": "Joker",
                                         "🤯": "Brain-Busted"]
         
         let selbut = sender
